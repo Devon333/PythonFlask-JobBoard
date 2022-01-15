@@ -19,10 +19,10 @@ def execute_sql():
   connection = open_connection
   sql, values, commit, single = connection, (), False, False
   cursor=connection.execute(sql, values)
-  if commit = True:
+  if commit == True:
       results = connection.commit()
   else:
-      results = if: cursor.fetchone() if single else cursor.fetchall()
+      results = cursor.fetchall()
   return results
 
 def close_connection(exception):
